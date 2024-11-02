@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #000000;
+  color: #ffffff; /* Ensure text is visible on the black background */
+}
+
+.App {
+  text-align: center;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+}
+
+.sticky-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sticky-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+}
