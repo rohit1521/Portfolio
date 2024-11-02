@@ -58,6 +58,7 @@
   padding: 0px 0px 0.9px;
   gap: 10px;
 }
+
 .link1 {
   position: absolute;
   top: -0.75px;
@@ -90,6 +91,11 @@
   justify-content: flex-start;
   padding: 0px 0px 0.9px;
   gap: 10px;
+}
+
+.caseStudies:hover{
+  color:#ae61fa;
+  transform: scale(1.05);
 }
 .navigationlinks {
   width: 452.1px;

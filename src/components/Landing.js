@@ -1,5 +1,6 @@
 import styles from "./LandingSection.module.css";
 import LandingSectionImage from "../assets/LandingSection.png";
+import Badge from "../assets/Badge.svg";
 
 const LandingSection = () => {
   return (
@@ -9,23 +10,26 @@ const LandingSection = () => {
     >
       <div className={styles.header}>
         <div className={styles.headingGroup1}>
-          <div className={styles.headingPrimary}>CREATING</div>
-          <div className={styles.headingSecondary}>TAILORMADE</div>
+          <div className={styles.heading1}>CREATING</div>
+          <div className={styles.heading2}>TAILORMADE</div>
         </div>
         <div className={styles.headingGroup2}>
-          <div className={styles.headingPrimary}>DIGITAL</div>
-          <div className={styles.headingSecondary}>EXPERIENCE</div>
+          <div className={styles.heading3}>DIGITAL</div>
+          <div className={styles.heading4}>EXPERIENCE</div>
         </div>
         <div className={styles.descriptionContainer}>
           <p className={styles.descriptionText}>
             I’m a Product Designer with 5 years
           </p>
           <p className={styles.descriptionText}>
-            experience working at Microsoft. I've
+            experience, currently working at Microsoft.
           </p>
           <p className={styles.descriptionText}>
-            previously worked at Disney+ & Dunzo
+            I've previously worked at Disney+ & Dunzo
           </p>
+        </div>
+        <div className={styles.badge}>
+          <img src={Badge} alt="Badge" />
         </div>
       </div>
     </div>

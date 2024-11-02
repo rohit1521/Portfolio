@@ -1,0 +1,106 @@
+.container {
+    transform: rotate(2deg);
+    padding-top: 15vh;
+    overflow: hidden;
+    width: 100%; /* Full width of the container */
+    display: flex;
+    flex-direction: column; /* Stack the rows vertically */
+    gap: 20px; /* Space between the rows */
+  }
+  
+  .cardWrapper {
+    display: flex;
+    width: max-content; /* Allow the content to take as much width as needed */
+    animation: scrollLeft 20s linear infinite; /* Default scrolling animation */
+    animation-play-state: running; /* Animation is running by default */
+  }
+  
+  .cardWrapper:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+  }
+  
+  .reverse {
+    animation: scrollRight 20s linear infinite;
+    animation-play-state: running; /* Animation is running by default */
+  }
+  
+  .reverse:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+  }
+  
+  .card {
+    width: 380px;
+    height: 280px;
+    position: relative; /* Position relative for the shimmer effect */
+    margin-right: 10px; /* Space between cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2a2a2a; /* Dark background color for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 50%;
+  }
+
+  .card:hover{
+    opacity: 100%;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* Dark Shimmer Effect */
+  .shimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      #333 0%,
+      #444 20%,
+      #333 40%,
+      #333 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 10px;
+  }
+  
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    from {
+      background-position: -200% 0;
+    }
+    to {
+      background-position: 200% 0;
+    }
+  }
+  
+  /* Keyframes for the first row animation (left to right) */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move to the left */
+    }
+  }
+  
+  /* Keyframes for the second row animation (right to left) */
+  @keyframes scrollRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0); /* Move to the right */
+    }
+  }
+  
